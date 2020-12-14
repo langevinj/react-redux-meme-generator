@@ -32,8 +32,8 @@ function MemeGenerator() {
                 <textarea onChange={handleChange} name="topText" value={formData.topText} id="topText" row="4" cols="50"></textarea>
                 <label htmlFor="bottomText">Bottom Text:</label>
                 <textarea onChange={handleChange} name="bottomText" value={formData.bottomText} id="bottonText" row="4" cols="50"></textarea>
-                <label htmlForm="imgUrl">Image Url:</label>
-                <input type="text" name="imgUrl" value={formData.imgUrl} id="imgUrl"></input>
+                <label htmlFor="imgUrl">Image Url:</label>
+                <input type="text" name="imgUrl" value={formData.imgUrl} id="imgUrl" onChange={handleChange}></input>
             </form>
         </div>
     )

@@ -12,7 +12,7 @@ function MemeList() {
 
     return (
         <div className="meme-container">
-            {memes.map(meme => <MemeCard id={meme.id} deleteMeme={deleteMeme} topText={meme.topText} bottomText={meme.bottomText} imgUrl={meme.imgUrl}/>)} 
+            {memes ? memes.map(meme => <MemeCard id={meme.id} deleteMeme={deleteMeme} topText={meme.topText} bottomText={meme.bottomText} imgUrl={meme.imgUrl}/>) : null} 
         </div>
     )
 }
