@@ -6,7 +6,7 @@ function rootReducer(state = INITIAL_STATE, action) {
             return { ...state, memes: [...state.memes, action.payload]};
 
         case "DELETE":
-            return { ...state, memes: state.memes.filter(meme => action.payload.id !== meme.id)};
+            return { ...state, memes: state.memes.filter(meme => action.payload !== meme.id)};
         
         default:
             return state;
