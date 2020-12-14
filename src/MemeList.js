@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from "react-redux"
 import MemeCard from './MemeCard'
+import './MemeList.css'
 
 function MemeList() {
     const memes = useSelector(st => st.memes)
@@ -11,8 +12,8 @@ function MemeList() {
     }
 
     return (
-        <div className="meme-container">
-            {memes ? memes.map(meme => <MemeCard id={meme.id} deleteMeme={deleteMeme} topText={meme.topText} bottomText={meme.bottomText} imgUrl={meme.imgUrl}/>) : null} 
+        <div className="memelist">
+            {memes ? memes.map(meme => <MemeCard id={meme.id} key={meme.id} deleteMeme={deleteMeme} topText={meme.topText} bottomText={meme.bottomText} imgUrl={meme.imgUrl}/>) : null} 
         </div>
     )
 }
