@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react'
 import './App.css';
 import MemeGenerator from './MemeGenerator'
 import MemeList from './MemeList'
